@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website for menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Common styles for all screen sizes */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            height: 100vh;
+        }
+
+        .menu {
+            font-size: 30px;
+            font-weight: 600;
+            margin: 50px 0;
+            display: grid;
+            place-items: center;
+        }
+
+        .menu_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            gap: 30px;
+        }
+
+
+        .menu_card {
+            border: black 3px solid;
+            background-color: rgb(199, 197, 197);
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            flex: 1;
+            /* Each section takes equal space */
+            max-width: 520px;
+        }
+
+        h2 {
+            margin: 0px;
+            display: grid;
+            place-items: end;
+            padding: 10px 5px;
+            color: #333;
+            background-color: rgb(161, 242, 215);
+        }
+
+        p {
+            padding: 20px;
+        }
+
+        
+        @media screen and (min-width: 992px) {
+            .menu_container {
+                
+                flex-wrap: wrap;
+            }
+
+            .menu_card {
+                
+                flex: 1;
+                
+            }
+        }
+
+        
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            .menu_container {
+                flex-wrap: wrap;
+            }
+
+            .menu_card {
+                
+                flex: 1;
+                max-width: calc(50% - 15px);
+               
+            }
+
+            
+            .menu_card:nth-child(3) {
+                flex: 2;
+              
+                max-width: 100%;
+            }
+        }
+
+        
+        @media screen and (max-width: 767px) {
+            .menu_container {
+                flex-wrap: wrap;
+            }
+
+            .menu_card {
+                /* Each section takes the entire row */
+                flex: 1;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class=" menu">OUR MENU</h1>
+        <div class="menu_container">
+            <div class=" menu_card">
+                <h2>Peri Chicken</h2>
+                <p>Our peri chicken is the best in the world. We always manage to provide the best quality for the food,
+                    that gives us higer possibility to attaract the customes in any conditions. Lorem ipsum dolor sit.
+                </p>
+            </div>
+            <div class="menu_card">
+                <h2>Super Salad</h2>
+                <p>We provide the fresh from the fresh. The salad leaf we provide is the best quality of the entire
+                    country
+                    that we can assure, We always manage to provide the best quality for the food, that gives us higer
+                    !</p>
+            </div>
+            <div class="menu_card">
+                <h2>Wraps and Pitas</h2>
+                <p>The quality of the bread is the height quality bun that we can get from the provider or suppylier is
+                    the? that we can assure, We always manage to provide the best quality for the food, that gives us
+                    higer </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
